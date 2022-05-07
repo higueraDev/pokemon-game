@@ -8,7 +8,7 @@ export default {
 
 <template>
 	<h1>¿Quien es este pokemón?</h1>
-    <PokemonPicture></PokemonPicture>
+    <PokemonPicture :showPokemon="false" :pokemonId="10"></PokemonPicture>
     <PokemonOptions></PokemonOptions>
 </template>
 <style></style>
