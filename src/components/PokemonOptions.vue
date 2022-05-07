@@ -12,7 +12,13 @@ export default {
 <template>
 	<div class="options-container">
 		<ul>
-			<li v-for="{ name, id } in pokemons" :key="id">{{ name }}</li>
+			<li
+				@click="$emit('selection', id)"
+				v-for="{ name, id } in pokemons"
+				:key="id"
+			>
+				{{ name }}
+			</li>
 		</ul>
 	</div>
 </template>
@@ -21,6 +27,7 @@ export default {
 /* Pokemon Options */
 ul {
 	list-style-type: none;
+	padding: 0;
 }
 li {
 	background-color: white;
