@@ -34,4 +34,25 @@ describe("PokemonPage Page", () => {
 		});
 		expect(wrapper.html()).toMatchSnapshot();
 	});
+
+	test("should show components pokemonPicture and pokemonOptions", async () => {
+		const wrapper = await mount(PokemonPage, {
+			data() {
+				return {
+					pokemonArr: pokemons,
+					pokemon: pokemons[0],
+					showPokemon: false,
+					showAnswer: false,
+					message: "",
+				};
+			},
+		});
+		const pokemonPicture = wrapper.find("[data-testid='pokemonPicture']"),
+			pokemonOptions = wrapper.find("[data-testid='pokemonOptions']");
+
+		expect(pokemonPicture.exists()).toBeTruthy();
+		expect(pokemonOptions.exists()).toBeTruthy();
+		expect(pokemonPicture.attributes("pokemonid")).toBe("1");
+		expect(pokemonOptions.attributes("pokemons")).toBeTruthy();
+	});
 });

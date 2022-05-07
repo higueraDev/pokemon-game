@@ -47,10 +47,12 @@ export default {
 	<div v-else>
 		<h1>¿Quien es este pokemón?</h1>
 		<PokemonPicture
+			data-testid="pokemonPicture"
 			:showPokemon="showPokemon"
 			:pokemonId="pokemon.id"
 		></PokemonPicture>
 		<PokemonOptions
+			data-testid="pokemonOptions"
 			@selection="checkAnswer"
 			:pokemons="pokemonArr"
 		></PokemonOptions>
