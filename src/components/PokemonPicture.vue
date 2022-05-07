@@ -22,11 +22,12 @@ export default {
 <template>
 	<div class="pokemon-container">
 		<img
+			v-if="!showPokemon"
 			class="hidden-pokemon"
 			:src="imgSrc"
 			alt="pokemón"
 		/>
-		<img v-if="showPokemon" class="fade-in" :src="imgSrc" alt="pokemón" />
+		<img v-else class="fade-in" :src="imgSrc" alt="pokemón" />
 	</div>
 </template>
 
