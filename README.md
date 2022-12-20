@@ -1,3 +1,5 @@
+#Take a look here: https://master--wichpokemon.netlify.app
+
 # 04-pokemon-game
 
 ## Project setup
